@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Tutorial - Types of Machine Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ML Tutorial</div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#supervised">Supervised</a></li>
+            <li><a href="#unsupervised">Unsupervised</a></li>
+            <li><a href="#reinforcement">Reinforcement</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="overview" class="hero">
+            <h1>Types of Machine Learning</h1>
+            <p>Explore the three main types of machine learning through interactive demonstrations and real-world examples.</p>
+            
+            <div class="ml-types">
+                <div class="ml-card">
+                    <h2>Supervised Learning</h2>
+                    <p>Learn from labeled data to make predictions on new, unseen data.</p>
+                    <ul>
+                        <li>Email Classification</li>
+                        <li>Price Prediction</li>
+                        <li>Medical Diagnosis</li>
+                    </ul>
+                    <a href="#supervised" class="btn">Explore Supervised</a>
+                </div>
+                
+                <div class="ml-card">
+                    <h2>Unsupervised Learning</h2>
+                    <p>Discover hidden patterns in data without labeled examples.</p>
+                    <ul>
+                        <li>Customer Segmentation</li>
+                        <li>Anomaly Detection</li>
+                        <li>Recommendations</li>
+                    </ul>
+                    <a href="#unsupervised" class="btn">Explore Unsupervised</a>
+                </div>
+                
+                <div class="ml-card">
+                    <h2>Reinforcement Learning</h2>
+                    <p>Learn through trial and error using rewards and penalties.</p>
+                    <ul>
+                        <li>Game Playing</li>
+                        <li>Autonomous Vehicles</li>
+                        <li>Robotics</li>
+                    </ul>
+                    <a href="#reinforcement" class="btn">Explore Reinforcement</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="supervised" class="section">
+            <h2>Supervised Learning</h2>
+            <p>Supervised learning uses labeled data to train models that can make predictions on new, unseen data.</p>
+            
+            <div class="how-it-works">
+                <h3>How it Works</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Training Data</h4>
+                        <p>Input features with correct answers (labels)</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Learning</h4>
+                        <p>Algorithm learns patterns from examples</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Prediction</h4>
+                        <p>Make predictions on new, unseen data</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h3>Interactive Demo: Classification</h3>
+                <div class="controls">
+                    <div class="control">
+                        <label for="training-size">Training Data Size:</label>
+                        <input type="range" id="training-size" min="20" max="100" value="50">
+                        <span id="training-size-value">50</span>
+                    </div>
+                    <div class="control">
+                        <label for="noise-level">Noise Level:</label>
+                        <input type="range" id="noise-level" min="0" max="50" value="10">
+                        <span id="noise-level-value">10</span>%
+                    </div>
+                    <div class="control">
+                        <button id="train-classifier" class="btn">Train Classifier</button>
+                        <button id="reset-classifier" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+                <div id="classification-viz" class="visualization"></div>
+            </div>
+            
+            <div class="algorithms">
+                <h3>Popular Algorithms</h3>
+                <div class="algorithm-grid">
+                    <div class="algorithm">
+                        <h4>Linear Regression</h4>
+                        <p>Finds the best line through data points to predict continuous values</p>
+                        <small>Use case: Predicting prices or temperatures</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Decision Trees</h4>
+                        <p>Creates a tree-like model of decisions to classify data</p>
+                        <small>Use case: Classification with interpretability</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Random Forest</h4>
+                        <p>Combines multiple decision trees for better accuracy</p>
+                        <small>Use case: High accuracy classification/regression</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Support Vector Machine</h4>
+                        <p>Finds optimal boundary between different classes</p>
+                        <small>Use case: Complex, high-dimensional data</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unsupervised" class="section">
+            <h2>Unsupervised Learning</h2>
+            <p>Unsupervised learning finds hidden patterns in data without labeled examples.</p>
+            
+            <div class="how-it-works">
+                <h3>How it Works</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Unlabeled Data</h4>
+                        <p>Input features without correct answers</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Pattern Discovery</h4>
+                        <p>Algorithm finds hidden structures</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Insights</h4>
+                        <p>Reveal clusters, anomalies, or patterns</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h3>Interactive Demo: K-means Clustering</h3>
+                <div class="controls">
+                    <div class="control">
+                        <label for="k-clusters">Number of Clusters (k):</label>
+                        <input type="range" id="k-clusters" min="2" max="6" value="3">
+                        <span id="k-clusters-value">3</span>
+                    </div>
+                    <div class="control">
+                        <label for="data-points">Data Points:</label>
+                        <input type="range" id="data-points" min="50" max="200" value="100">
+                        <span id="data-points-value">100</span>
+                    </div>
+                    <div class="control">
+                        <button id="run-kmeans" class="btn">Run K-means</button>
+                        <button id="reset-kmeans" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+                <div id="kmeans-viz" class="visualization"></div>
+            </div>
+            
+            <div class="algorithms">
+                <h3>Popular Algorithms</h3>
+                <div class="algorithm-grid">
+                    <div class="algorithm">
+                        <h4>K-means Clustering</h4>
+                        <p>Groups data into k clusters based on similarity</p>
+                        <small>Use case: Customer segmentation, market research</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Hierarchical Clustering</h4>
+                        <p>Creates tree-like cluster structures</p>
+                        <small>Use case: Organizing data into hierarchical groups</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>PCA</h4>
+                        <p>Reduces data dimensions while preserving important information</p>
+                        <small>Use case: Data visualization and dimensionality reduction</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>DBSCAN</h4>
+                        <p>Finds clusters of varying shapes and identifies outliers</p>
+                        <small>Use case: Anomaly detection and flexible clustering</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reinforcement" class="section">
+            <h2>Reinforcement Learning</h2>
+            <p>Reinforcement learning teaches agents to make decisions through trial and error using rewards and penalties.</p>
+            
+            <div class="how-it-works">
+                <h3>How it Works</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Environment</h4>
+                        <p>Agent interacts with environment</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Actions & Rewards</h4>
+                        <p>Agent takes actions and receives rewards</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Learning</h4>
+                        <p>Agent learns optimal policy over time</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h3>Interactive Demo: Grid World</h3>
+                <div class="controls">
+                    <div class="control">
+                        <label for="learning-rate">Learning Rate:</label>
+                        <input type="range" id="learning-rate" min="0.1" max="1" step="0.1" value="0.5">
+                        <span id="learning-rate-value">0.5</span>
+                    </div>
+                    <div class="control">
+                        <label for="episodes">Episodes:</label>
+                        <input type="range" id="episodes" min="50" max="500" value="200">
+                        <span id="episodes-value">200</span>
+                    </div>
+                    <div class="control">
+                        <button id="start-learning" class="btn">Start Learning</button>
+                        <button id="reset-rl" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+                <div id="rl-viz" class="visualization"></div>
+                <div class="rl-stats">
+                    <div class="stat">
+                        <span>Episode:</span>
+                        <span id="current-episode">0</span>
+                    </div>
+                    <div class="stat">
+                        <span>Total Reward:</span>
+                        <span id="total-reward">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="algorithms">
+                <h3>Popular Algorithms</h3>
+                <div class="algorithm-grid">
+                    <div class="algorithm">
+                        <h4>Q-Learning</h4>
+                        <p>Learns optimal actions for each state using a value table</p>
+                        <small>Use case: Simple environments with discrete states</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Deep Q-Networks (DQN)</h4>
+                        <p>Uses neural networks to approximate Q-values for complex environments</p>
+                        <small>Use case: Complex environments like video games</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Policy Gradient</h4>
+                        <p>Directly learns the policy for taking actions</p>
+                        <small>Use case: Continuous action spaces</small>
+                    </div>
+                    <div class="algorithm">
+                        <h4>Actor-Critic</h4>
+                        <p>Combines value-based and policy-based methods</p>
+                        <small>Use case: Balancing exploration and exploitation</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Machine Learning Tutorial. Learn the fundamentals of AI through interactive examples.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
